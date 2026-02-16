@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeroForge OS | By Robert</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/layers.css">
+</head>
+<body>
+
+    <!-- TOP BAR: Fast Build -->
+    <header class="top-bar">
+        <div class="logo">HeroForge OS</div>
+        <div class="fast-build">
+            <span class="label">LAYERS:</span>
+            <button class="layer-toggle" data-layer="bg" style="background:#FF9F43">BG</button>
+            <button class="layer-toggle" data-layer="js" style="background:#1DD1A1">JS</button>
+            <button class="layer-toggle" data-layer="img" style="background:#54A0FF">IMG</button>
+            <button class="layer-toggle" data-layer="text" style="background:#FF6B6B">TEXT</button>
+            <button class="layer-toggle" data-layer="btn" style="background:#5F27CD">BTN</button>
+            <button class="layer-toggle" data-layer="data" style="background:#FECA57">DATA</button>
+        </div>
+        <div class="actions">
+            <button id="btn-export">Export</button>
+        </div>
+    </header>
+
+    <!-- MAIN CANVAS -->
+    <main id="canvas-area">
+        <div id="hero-preview" class="hero-section">
+            <!-- Layers injected here -->
+        </div>
+    </main>
+
+    <!-- OFF-CANVAS LEFT: Properties -->
+    <aside id="panel-left" class="off-canvas left">
+        <div class="panel-header">Properties</div>
+        <div id="properties-content">
+            <p>Select a layer to edit properties.</p>
+        </div>
+    </aside>
+
+    <!-- OFF-CANVAS BOTTOM: Code & Upload -->
+    <aside id="panel-bottom" class="off-canvas bottom">
+        <div class="panel-header">
+            <span>Code Layer & Data</span>
+            <button id="close-bottom">✕</button>
+        </div>
+        <div class="panel-content">
+            <div class="upload-zone" id="drop-zone">
+                <p>Drag .ZIP here (src/index.html, style.css, script.js)</p>
+                <input type="file" id="file-input" accept=".zip">
+            </div>
+            <div class="recent-uploads">
+                <h3>Recent Extractions</h3>
+                <ul id="recent-list"></ul>
+            </div>
+            <div class="code-viewer">
+                <h3>HTML/JS Viewer</h3>
+                <pre id="code-preview"></pre>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Scripts -->
+    <script src="js/storage.js"></script>
+    <script src="js/draggable.js"></script>
+    <script src="js/layer-system.js"></script>
+    <script src="js/export.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
