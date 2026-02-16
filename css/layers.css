@@ -1,0 +1,45 @@
+.draggable-layer {
+    position: absolute;
+    border: 2px solid transparent;
+    box-sizing: border-box;
+    contain: layout style;
+}
+
+.draggable-layer:hover,
+.draggable-layer.selected {
+    border-color: #007acc;
+    cursor: move;
+}
+
+.drag-handle {
+    height: 25px;
+    background: rgba(0, 122, 204, 0.8);
+    cursor: move;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+    font-size: 10px;
+    color: white;
+    user-select: none;
+}
+
+.layer-content {
+    width: 100%;
+    height: calc(100% - 25px);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resize-handle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #007acc;
+    z-index: 10;
+}
+
+.r-se { bottom: -5px; right: -5px; cursor: se-resize; }
+.r-nw { top: -5px; left: -5px; cursor: nw-resize; }
